@@ -1,0 +1,5 @@
+{
+    "CREATE_ORDER": "CREATE_ORDER",
+    "LOADING": "LOADING_AUTH",
+    "ERROR": "ERROR_AUTH"
+}

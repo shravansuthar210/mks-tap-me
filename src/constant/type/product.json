@@ -1,0 +1,5 @@
+{
+    "GET_PRODUCT": "GET_PRODUCT",
+    "LOADING": "LOADING_AUTH",
+    "ERROR": "ERROR_AUTH"
+}
