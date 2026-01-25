@@ -54,6 +54,16 @@ pipeline {
         }
       }
     }
+    stage('Prepare SSH') {
+      steps {
+        sh '''
+          mkdir -p /root/.ssh
+          touch /root/.ssh/known_hosts
+          ssh-keyscan github.com >> /root/.ssh/known_hosts
+        '''
+      }
+    }
+
     stage('upload-zip') {
       steps {
         script {
