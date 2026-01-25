@@ -25,5 +25,25 @@ pipeline {
         }
       }
     }
+    stage('build-zip') {
+      steps {
+        script {
+          sh 'zip -r build.zip build/ '
+        }
+      }
+    }
+    stage('upload-zip'){
+      steps{
+        script{
+          sshagent(['SSH_CREDENTIAL_ID']) {
+            sh '''
+              scp build.zip shr@192.168.122.175:/home/shr/
+            '''
+            sh 'unzip -o /home/shr/build.zip -d /var/www/my-react-app'
+          }
+        }
+      }
+      
+    }
   }
 }
