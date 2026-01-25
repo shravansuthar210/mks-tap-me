@@ -3,7 +3,10 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        echo "Hello from Jenkins!"
+        script {
+          echo "Hello from Jenkins!"
+          sh 'ls -al'
+        }
       }
     }
   }
