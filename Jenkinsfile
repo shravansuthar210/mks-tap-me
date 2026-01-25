@@ -35,7 +35,7 @@ pipeline {
     stage('upload-zip'){
       steps{
         script{
-          sshagent(['SSH_CREDENTIAL_ID']) {
+          sshagent(['deploy-ssh-key']) {
             sh '''
               scp build.zip shr@192.168.122.175:/home/shr/
             '''
