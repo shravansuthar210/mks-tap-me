@@ -1,7 +1,7 @@
 pipeline {
-  agent: {
-    node:{
-      label:'fedora-node'
+  agent {
+    node {
+      label 'fedora-node'
     }
   }
   stages {
