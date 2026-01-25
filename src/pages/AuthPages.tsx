@@ -1,8 +1,8 @@
-import { useState } from "react";
+// import { useState } from "react";
 import ViewOrderBtn from "../components/ViewOrderBtn";
 
 function AuthPages() {
-  const [product, setProduct] = useState([
+  const product=[
     {
       name: "Canat",
       isNew: true,
@@ -93,7 +93,7 @@ function AuthPages() {
       isNew: true,
       description: "blah blah blah blah",
     },
-  ]);
+  ]
   return (
     <div className="relative h-full overflow-y  w-full">
       <div
