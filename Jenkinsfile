@@ -32,18 +32,18 @@ pipeline {
         }
       }
     }
-    stage('upload-zip'){
-      steps{
-        script{
+    stage('upload-zip') {
+      steps {
+        script {
           sshagent(['deploy-ssh-key']) {
             sh '''
               scp build.zip shr@192.168.122.175:/home/shr/
+              ssh shr@192.168.122.175 "unzip -o /home/shr/build.zip -d /var/www/my-react-app"
             '''
-            sh 'unzip -o /home/shr/build.zip -d /var/www/my-react-app'
           }
         }
       }
-      
     }
+
   }
 }
