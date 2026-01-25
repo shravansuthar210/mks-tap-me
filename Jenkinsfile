@@ -28,7 +28,8 @@ pipeline {
     stage('build-zip') {
       steps {
         script {
-          sh 'zip -r build.zip build/ '
+          sh '''cd build
+          zip -r ../build.zip . '''
         }
       }
     }
