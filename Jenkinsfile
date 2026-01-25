@@ -42,6 +42,7 @@ pipeline {
         script {
           sshagent(['deploy-ssh-key']) {
             sh '''
+              ssh-keyscan -H 192.168.122.175 >> ~/.ssh/known_hosts
               scp build.zip shr@192.168.122.175:/home/shr/
               ssh shr@192.168.122.175 "unzip -o /home/shr/build.zip -d /var/www/my-react-app"
             '''
