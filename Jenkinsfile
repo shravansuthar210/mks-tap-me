@@ -26,7 +26,7 @@ pipeline {
     stage('Install ') {
       steps {
         script {
-          sh 'dnf install -y zip unzip'
+          sh 'apt-get update && apt-get install -y zip unzip'      
         }
       }
     }
