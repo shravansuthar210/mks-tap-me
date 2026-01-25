@@ -16,6 +16,8 @@ function Pages() {
           Go to Menu
         </button>
         <button className={`bg-[#f4732d] text-[#efefef] rounded-md font-normal w-[25rem] h-[3rem]`}>Pay bill</button>
+        <button className={`bg-[#f4732d] text-[#efefef] rounded-md font-normal w-[25rem] h-[3rem]`}>Location</button>
+
       </div>
     </div>
   );
