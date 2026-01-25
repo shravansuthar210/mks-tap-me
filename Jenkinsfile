@@ -23,6 +23,13 @@ pipeline {
         }
       }
     }
+    stage{
+      steps{
+        script{
+          sh 'sudo dnf install -y zip unzip'
+        }
+      }
+    }
     stage('install') {
       steps {
         script {
