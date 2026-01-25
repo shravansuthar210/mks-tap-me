@@ -17,5 +17,13 @@ pipeline {
         }
       }
     }
+    stage('build') {
+      steps {
+        script {
+          sh 'npm run build'
+          sh 'ls -al'
+        }
+      }
+    }
   }
 }
