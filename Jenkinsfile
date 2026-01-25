@@ -1,7 +1,9 @@
 pipeline {
   agent {
     node {
+      image 'node:20'
       label 'fedora-node'
+      args '-v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
   stages {
