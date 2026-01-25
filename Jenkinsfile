@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    node:{
+      label:'fedora-node'
+    }
+  }
   stages {
     stage('Test') {
       steps {
