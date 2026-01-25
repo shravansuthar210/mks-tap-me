@@ -1,9 +1,17 @@
 pipeline {
+  // agent {
+  //   node {
+  //     image 'node:20'
+  //     label 'fedora-node'
+  //     args '--privileged -v /var/run/docker.sock:/var/run/docker.sock'
+  //   }
+  // }
   agent {
-    node {
+    docker {
       image 'node:20'
       label 'fedora-node'
-      args '--privileged -v /var/run/docker.sock:/var/run/docker.sock'
+      // Allowing the container to talk to the host's Docker daemon
+      args '-u root --privileged -v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
   stages {
