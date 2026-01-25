@@ -1,6 +1,6 @@
-import { lazy } from 'react';
-import { Navigate, useLocation, useRoutes } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { lazy } from 'react';
+import { Navigate,  useRoutes } from 'react-router-dom';
+// import { useSelector } from 'react-redux';
 // layouts
 // import SimpleLayout from './layouts/simple';
 // import PlanPage from './pages/authPage/PlanPage';

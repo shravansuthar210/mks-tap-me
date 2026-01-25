@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 export default function RootLayout() {
   const [open, setOpen] = useState(false);
-  const [categories, setCategories] = useState([{ name: "Pizza", active: true, url: "" }]);
+  const categories =[{ name: "Pizza", active: true, url: "" }]
 
   return (
     <div className=" h-[94vh] flex flex-col">

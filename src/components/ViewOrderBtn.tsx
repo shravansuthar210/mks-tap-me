@@ -1,10 +1,8 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const ViewOrderBtn = () => {
   const navigation = useNavigate();
-  const [cartLength, setCartLength] = React.useState(5);
+  const cartLength = 0;//5
   const onClick = () => {
     navigation("/confirmOrder");
   };
